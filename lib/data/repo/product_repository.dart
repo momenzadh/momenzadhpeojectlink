@@ -1,27 +1,24 @@
+import 'package:momenzadhpeojectlink/common/http_client.dart';
 import 'package:momenzadhpeojectlink/data/product.dart';
+import 'package:momenzadhpeojectlink/data/source/product_data_source.dart';
 
-abstract class IProductRepository{
-  Future<List<ProductEntity>>.getAll(int sort);
-  Future<List<ProductEntity>>.search(String searchTerm);
+final productRepository =
+    ProductRepository(ProductRemoteDataSource(httpClient));
+
+abstract class IProductRepository {
+  Future<List<ProductEntity>> getAll(int sort);
+  Future<List<ProductEntity>> search(String searchTerm);
 }
 
-class ProductRepository implements IProductRepository{
-  @override
-  Future<List>() {
-    // TODO: implement Future
-    throw UnimplementedError();
-  }
+class ProductRepository implements IProductRepository {
+  final IProductDataSource dataSource;
+
+  ProductRepository(this.dataSource);
 
   @override
-  getAll(int sort) {
-    // TODO: implement getAll
-    throw UnimplementedError();
-  }
+  Future<List<ProductEntity>> getAll(int sort) => dataSource.getAll(sort);
 
   @override
-  search(String searchTerm) {
-    // TODO: implement search
-    throw UnimplementedError();
-  }
-
+  Future<List<ProductEntity>> search(String searchTerm) =>
+      dataSource.search(searchTerm);
 }
