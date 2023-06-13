@@ -4,7 +4,8 @@ import 'package:momenzadhpeojectlink/data/repo/auth_repository.dart';
 import 'package:momenzadhpeojectlink/data/repo/cart_repository.dart';
 import 'package:momenzadhpeojectlink/ui/cart/cart.dart';
 import 'package:momenzadhpeojectlink/ui/home/home.dart';
-import 'package:momenzadhpeojectlink/ui/widgets/badge.dart';
+// import 'package:momenzadhpeojectlink/ui/widgets/badge.dart';
+import 'package:flutter/src/material/badge.dart';
 
 const int homeIndex = 0;
 const int cartIndex = 1;
@@ -90,7 +91,7 @@ class _RootScreenState extends State<RootScreen> {
                             valueListenable:
                                 CartRepository.cartItemCountNotifier,
                             builder: (context, value, child) {
-                              return Badge(value: value);
+                              return Badge(backgroundColor: Colors.red,);
                             },
                           )),
                     ],

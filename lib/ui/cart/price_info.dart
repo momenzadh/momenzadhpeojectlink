@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nike_ecommerce_flutter/common/utils.dart';
-import 'package:nike_ecommerce_flutter/theme.dart';
+import 'package:momenzadhpeojectlink/common/utils.dart';
+import 'package:momenzadhpeojectlink/theme.dart';
 
 class PriceInfo extends StatelessWidget {
   final int payablePrice;

@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nike_ecommerce_flutter/common/utils.dart';
-import 'package:nike_ecommerce_flutter/data/cart_item.dart';
-import 'package:nike_ecommerce_flutter/theme.dart';
-import 'package:nike_ecommerce_flutter/ui/widgets/image.dart';
+import 'package:momenzadhpeojectlink/common/utils.dart';
+import 'package:momenzadhpeojectlink/data/cart_item.dart';
+import 'package:momenzadhpeojectlink/theme.dart';
+import 'package:momenzadhpeojectlink/ui/widgets/image.dart';
 
 class CartItem extends StatelessWidget {
   const CartItem(
